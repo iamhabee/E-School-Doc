@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-School Api Documentations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="scribbler-global.css">
+    <link rel="stylesheet" href="scribbler-doc.css">
+    <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <div class="doc__bg"></div>
+    <nav class="header">
+      <h1 class="logo">E-SCHOOL <span class="logo__thin">Doc</span></h1>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+        <li class="menu__item"><a href="web.html" class="link link--dark"><i class="fa fa-globe"></i> Web</a></li>
+        <li class="menu__item"><a href="https://github.com/charlytochi/E-School-Web-App.git" target="_blank" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn selected">Get Started</li>
+          <li class="js-btn">Requirements</li>
+          <li class="js-btn">Structure</li>
+          <li class="js-btn">API</li>
+          <li class="js-btn">User Login</li>
+          <li class="js-btn">Users Login Account</li>
+          <li class="js-btn">School MPOS Login</li>
+          <li class="js-btn">Students Log</li>
+          <li class="js-btn">Save Student Logs</li>
+          <li class="js-btn">Get All School</li>
+          <li class="js-btn">Update Profile</li>
+          <li class="js-btn">Update Profile picture</li>
+          <li class="js-btn">Fetch All Account Type</li>
+          <li class="js-btn">Fetch All Parents</li>
+          <li class="js-btn">Fetch All Teachers</li>
+          <li class="js-btn">Fetch Student Teachers</li>
+          <li class="js-btn">Send Notification</li>
+          <li class="js-btn">Recieve Notification</li>
+          <li class="js-btn">Read Notification</li>
+          <li class="js-btn">Sent Notification</li>
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section">
+          <h3 class="section__title">Get Started</h3>
+          <p>E-School Web App is a school management Application build to manage and digitalize all school activities and provide seamless payment integration.</p>
+          <h3 class="section__title">Installation Process</h3>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                    ~ git clone https//:github.com/charlytochi/E-School-Web-App.git
+                    ~ cd E-School-Web-App
+                    ~ composer install
+                    ~ php artisan migrate
+                    ~ php artisan serve 🥝`
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Requirements</h3>
+          <p>All the below mentioned Requirements are needed for successful Installation of the app.</p>
+          <table id="customers">
+            <tr>
+              <th>Tools</th>
+              <th>Version</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>Composer</td>
+              <td> >=1.10 </td>
+              <td>Laravel packages installer</td>
+            </tr>
+            <tr>
+              <td>Xampp/Wampp</td>
+              <td>7.0 and above</td>
+              <td>Local server in development mode</td>
+            </tr>
+            <tr>
+              <td>Postman</td>
+              <td>7.26.0</td>
+              <td>Test Api endpoint</td>
+            </tr>
+          </table>
+          <!-- <p></p> -->
+          <hr />
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Project Folder Structure</h3>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                    ~ app
+                    ~ bootstrap
+                    ~ config
+                    ~ database
+                    ~ public
+                    ~ resources
+                    ~ routes
+                    ~ storage
+                    ~ tests
+                    ~ vendor
+                    ~ .env
+                    ~ .gitattributes
+                    ~ .gitignore
+                    ~ composer.json
+                    ~ composer.lock
+                    ~ composer.phar
+                    ~ composer.phar
+                    ~ packages.json
+                    ~ packages-lock.json
+                    ~ README.md
+                    ~ server.php                    
+              </code>
+            </pre>
+          </div>
+          <p>The App folder contains All Http folder </p>
+          <p></p>
+          
+          <hr />
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">API</h3>
+          <p>The API its a built in features for synchronizing communication between Our school web app 
+            and mobile app, the API lives in the app/Http/Controllers/API folder</p>
+          <h4 class="section__title">Features</h4>
+          <h5 class="section__title">New School Registration</h5>
+          <p>Creation of new school can only be done on Web platform by the Super Administrator of Efull technology</p>
+          <p>Create Users {Parents, Teachers and Students}</p>
+          <p>All other users creation will be done by the admin of the school in web App. It will be further discuss in the Web section of this documentation</p>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Users Login</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Login method require 2 params
+                    Method Type
+                      POST
+                    Api Name
+                      https://sandbox-eschool.efulltech.com.ng/login{
+                    params
+                      email, password
+                    response
+                        access_token, token_type, user_data, school_names, accounts, message
+                   }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Users Login Account</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Login Account method require 2 params
+                    Method Type
+                      POST
+                    Api Name
+                      https://sandbox-eschool.efulltech.com.ng/loginAccount/id{
+                    params
+                      no param
+                    response
+                        students, children, messages, school_data
+                   }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">School MPOS Login</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                School Login method require 2 params
+                    Method Type
+                      POST
+                    Api Name
+                      https://sandbox-eschool.efulltech.com.ng/schoolLogin{
+                    params
+                      email, password
+                    response
+                        access_token, token_type, user, students, message
+                   }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Students Log</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                protected method for logging students attendance and notifying parents of the children arrivals and departure from school
+                  Method Type
+                    POST
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/saveStudentLog{
+                  params
+                    json_encoded: card code, timestamp
+                  response
+                    payload, response, error
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Save Student Logs</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Saves all students message log
+                  Method Type
+                    POST
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/sentMessageLog{
+                  params
+                    json encoded data: message_id, message_content, message_isdn, student_card_code, card_id, message_sent
+                  response
+                    json_encoded responses
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Get All School</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                  Method Type
+                    GET
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/getAllSchoolName{
+                  params
+                    no params
+                  response
+                    school_names
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Update Profile</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Update profile works for all users except admin and super admin
+                  Method Type
+                    POST
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/updateProfile{
+                  params
+                    last_name, first_name, title, email, address, phone_number
+                  response
+                    message, user_data
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Update Profile picture </h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Update profile picture works for all users except admin and super admin
+                  Method Type
+                    POST
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/updateProfileImage{
+                  params
+                    profile_image
+                  response
+                    message, updated_data
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Fetch All Account Type</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Fetch all available account type
+                  Method Type
+                    GET
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/getAccountType{
+                  params
+                    no params
+                  response
+                  acct_type
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Fetch All Parents</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Fetch all parents related to a School
+                  Method Type
+                    GET
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/allParents{
+                  params
+                    school_id
+                  response
+                    parents
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Fetch All Teachers</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Fetch all Teachers related to a School
+                  Method Type
+                    GET
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/allTeachers{
+                  params
+                    school_id
+                  response
+                    teachers
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Fetch Student Teachers</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Fetch all Teachers related to a School and a class
+                  Method Type
+                    GET
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/studentTeacher{
+                  params
+                    school_id, class_assigned
+                  response
+                    teachers
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Send Notification</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Send Notification betwween parents and teachers
+                  Method Type
+                    POST
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/sendNotif{
+                  params
+                    title, content, type, sender_id, reciever_id, school_id, reciever_acct_type, sender_acct_type,
+                  response
+                    message
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Recieve Notification</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Recieve Notification from parents/teacher
+                  Method Type
+                    GET
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/sendNotif{
+                  params
+                    reciever_acct_type, reciever_id, school_id
+                  response
+                    message, notifications
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Read Notification</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Read Notification
+                  Method Type
+                    GET
+                  Api name
+                    https://sandbox-eschool.efulltech.com.ng/readNotif{
+                  params
+                    notif_id
+                  response
+                    message, notifications
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h5 class="section__title">Sent Notification</h5>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                Sent Notification
+                  Method Type
+                    GET
+                  Api name 
+                    https://sandbox-eschool.efulltech.com.ng/sentNotif{
+                  params
+                  sender_acct_type, sender_id, school_id
+                  response
+                    message, notifications
+              }
+              </code>
+            </pre>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer" id="date">
+        <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">E-School</a>.
+        <script> 
+          var d = new Date(); var n = d.getFullYear(); 
+          document.getElementById("date").innerHTML = "Powered By &copy Efull Technology " + n;
+        </script>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>

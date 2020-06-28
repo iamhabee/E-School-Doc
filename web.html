@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-School Api Documentations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="scribbler-global.css">
+    <link rel="stylesheet" href="scribbler-doc.css">
+    <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <div class="doc__bg"></div>
+    <nav class="header">
+      <h1 class="logo">E-SCHOOL <span class="logo__thin">Doc</span></h1>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Api</a></li>
+        <li class="menu__item"><a href="https://github.com/charlytochi/E-School-Web-App.git" target="_blank" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+        
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn">Web</li>
+          <li class="js-btn">School Registration</li>
+          <li class="js-btn">Login Admin</li>
+          <li class="js-btn">Dashboard</li>
+          <li class="js-btn">Create Parents</li>
+          <li class="js-btn">Create Students</li>
+          <li class="js-btn">Create Teachers</li>
+          <li class="js-btn">Actions Button</li>
+          <li class="js-btn">Create Classes</li>
+          <li class="js-btn">Create Messages</li>
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section">
+          <h3 class="section__title">Web</h3>
+          <p>E-School Web App is a school management Application build to manage and digitalize all school activities and provide seamless payment integration.</p>
+          <h3 class="section__title">Installation Process</h3>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                    ~ git clone https//:github.com/charlytochi/E-School-Web-App.git
+                    ~ cd E-School-Web-App
+                    ~ composer install
+                    ~ php artisan migrate
+                    ~ php artisan serve 🥝`
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">School Registration</h3>
+          <p>All school has to go through registration process on our web App which will done by Efull Technology administrator Staff</p>
+          <p> The process is as follow</p>
+          <p> Collect all needed school data </p>
+          <p> Goto https://sandbox-eschool.efulltech.com.ng/login  to log in as super admin</p>
+          <p> click on schools on the left sidebar to create new </p>
+          <p> Create a new school with a default admin login credentials</p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Login</h3>
+          <p>
+            All user can Login on the Web with different access level
+          </p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Dashboard</h3>
+          <p>
+            Dashboard displays the statistics of the school management activities
+          </p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Create Parents</h3>
+          <p>
+            Parents are created by the school administrator
+          </p>
+          <p>The process are as follow </p>
+          <p>collect the data of the parent</p>
+          <p>Goto https://sandbox-eschool.efulltech.com.ng/parents</p>
+          <p>Click on add parent button to create a fresh account or click a Add Account button to add existing users</p>
+          <p>Fill in all data and press submit button </p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Create Students</h3>
+          <p>
+            Students are created by the school administrator
+          </p>
+          <p>The process are as follow </p>
+          <p>collect the data of the student</p>
+          <p>Goto https://sandbox-eschool.efulltech.com.ng/student</p>
+          <p>Click on add parent button to create a fresh account or click a Add Account button to add existing users</p>
+          <p>Fill in all data and press submit button </p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Create Teachers</h3>
+          <p>
+            Teachers are created by the school administrator
+          </p>
+          <p>The process are as follow </p>
+          <p>collect the data of the teacher</p>
+          <p>Goto https://sandbox-eschool.efulltech.com.ng/teacher</p>
+          <p>Click on add parent button to create a fresh account or click a Add Account button to add existing users</p>
+          <p>Fill in all data and press submit button </p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Action Buttons</h3>
+          <p>
+            Different actions can be made on any users like updating, deleting, and view details
+          </p>
+          <p>To view, update or delete any user by the admin just click on any of the action button that best describe your action</p>
+          <p>All action can done by the admin except changing of password of any users</p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Create Classes</h3>
+          <p>
+            Classes are created by the school administrator
+          </p>
+          <p>The process are as follow </p>
+          <p>collect the data of the parent</p>
+          <p>Goto https://sandbox-eschool.efulltech.com.ng/classes</p>
+          <p>Click on add class button to create a new class</p>
+          <p>Fill in all class details and press submit button </p>
+          <p>Note that classes are expected to be created prior to adding users to the school database</p>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Create Messages</h3>
+          <p>
+            Messages are created by the school administrator
+          </p>
+          <p>The process are as follow </p>
+          <p>Goto https://sandbox-eschool.efulltech.com.ng/message</p>
+          <p>Click on add message button to create a new message template</p>
+          <p>Fill in all data and press submit button </p>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer" id="date">
+        <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">E-School</a>.
+        <script> 
+          var d = new Date(); var n = d.getFullYear(); 
+          document.getElementById("date").innerHTML = "Powered By &copy Efull Technology " + n;
+        </script>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>
